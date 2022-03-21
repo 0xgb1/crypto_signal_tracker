@@ -1,0 +1,22 @@
+[package]
+name = "crypto_tracker"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "operations"
+path = "src/lib.rs"
+
+[dependencies]
+#reqwest = {version = "0.11.10", features = ["json", "blocking"]}
+reqwest_sync = {package = "reqwest", version = "0.9.18"}
+#serde = "1.0.136"
+#serde_derive = "1.0.117"
+#futures = "0.3.21"
+#tokio = {version = "1.17.0", features=["full"]}
+#http = "0.2.6"
+json = "0.12.4"
+phf = {version = "0.10.1", features = ["macros"]}
+rustbreak = {version = "2.0.0", features = ["ron_enc"]}
+chrono = "0.4.19"
