@@ -9,7 +9,7 @@ pub fn display_prices(check_large_changes: Option<bool>) {
         let price = connection::get_price(key.0, connection::FIAT_OF_CHOICE).unwrap();
         println!("{} ({}): {:?}", values::ACTUAL_NAMES[key.0], *key.0, &price);
         if check_large_changes == Some(true) {
-            let possible_large_change = signals::large_change(key.0, &price); //.ok_or_else(|| "Not much of a change");
+            let possible_large_change = signals::large_change(key.0, &price);
             if possible_large_change == None {
                 println!("{}: {:?}", key.0, possible_large_change.ok_or("Not much of a change"));
             }
