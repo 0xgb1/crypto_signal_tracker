@@ -2,6 +2,6 @@
 A simple utility for tracking prices of certain cryptocurrencies
 
 The project needs more error-handling with what it already has, but more features would serve it well:  
-  an easy way to add new currencies without editing code (e.g., from the terminal)  
-  a database to store time-series data  
-  more advanced signals  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; an easy way to add new currencies without editing code (e.g., from the terminal)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a database to store time-series data  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; more advanced signals  
