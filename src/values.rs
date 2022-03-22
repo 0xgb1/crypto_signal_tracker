@@ -1,6 +1,5 @@
 use phf::{Map, phf_map};
 
-#[allow(dead_code)]
 pub static CURRENCY_CODES: Map<&'static str, &'static str> = phf_map! { // lacks fiat code
     "BTC" => "XXBTZ",
     "ETH" => "XETHZ",
@@ -18,7 +17,6 @@ pub static CURRENCY_CODES: Map<&'static str, &'static str> = phf_map! { // lacks
     "NANO" => "NANO",
 };
 
-#[allow(dead_code)]
 pub static ACTUAL_NAMES: Map<&'static str, &'static str> = phf_map! {
     "BTC" => "Bitcoin",
     "ETH" => "Ethereum",
@@ -37,7 +35,7 @@ pub static ACTUAL_NAMES: Map<&'static str, &'static str> = phf_map! {
 };
 
 // buy/sell targets are arbitrary, must be updated in code (for now)
-#[allow(dead_code)]
+
 pub static TARGETS: Map<&'static str, &'static (f32,f32)> = phf_map! {
     "BTC" => &(35000.0, 48000.0),
     "ETH" => &(1900.0, 3600.0),

@@ -2,7 +2,6 @@
 #[path = "values.rs"] mod values;
 #[path = "connection.rs"] mod connection;
 
-#[allow(dead_code)]
 pub fn trade(currency: &str, current_price: &f32) -> bool {
     if current_price >= &values::TARGETS[currency].1 {
         println!("Sell! {} is at ${}", currency, current_price);
@@ -15,7 +14,6 @@ pub fn trade(currency: &str, current_price: &f32) -> bool {
     false
 }
 
-#[allow(dead_code)]
 pub fn large_change(currency: &str, current_price: &f32) -> Option<f32> {
     let low = connection::price_array(currency, connection::FIAT_OF_CHOICE, "l").unwrap();
     let high = connection::price_array(currency, connection::FIAT_OF_CHOICE, "h").unwrap(); 

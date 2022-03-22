@@ -2,19 +2,15 @@ use std::io::Read;
 
 #[path = "values.rs"] mod values;
 
-#[allow(dead_code)]
 pub const FIAT_OF_CHOICE: &str = "USD"; // or "EUR" or others
 
-#[allow(dead_code)]
 const KRAKEN_API_BASE: &str = "https://api.kraken.com/0/public/Ticker?pair=";
 
-#[allow(dead_code)]
 pub fn get_price(cryptocurrency: &str, fiat: &str) -> Result<f32, Box<dyn std::error::Error>> {
     price_array(cryptocurrency, fiat, "b") 
     // the "b" value will gives us the bid array price, approximating the market price
 }
 
-#[allow(dead_code)]
 pub fn price_array(cryptocurrency: &str, fiat: &str, array_choice: &str) -> Result<f32, Box<dyn std::error::Error>> {
     // makes a request to the Kraken API to get market data,
     // the parameter "array_choice" indicates what data, 
@@ -29,7 +25,7 @@ pub fn price_array(cryptocurrency: &str, fiat: &str, array_choice: &str) -> Resu
         ["result"]
         [full_currency_code]
         [array_choice][0].as_str().ok_or(
-        "Failed to unwrap string value of f32 price")?
+        "Failed to unwrap string value of price array")?
         .parse::<f32>()?;
         Ok(*price)
 }

@@ -1,6 +1,6 @@
-#[path = "values.rs"] mod values;
-#[path = "signals.rs"] mod signals;
-#[path = "connection.rs"] mod connection;
+mod values;
+mod signals;
+mod connection;
 
 pub fn display_prices(check_large_changes: Option<bool>) {
     // displays prices; if check_large_changes is Some(true),
