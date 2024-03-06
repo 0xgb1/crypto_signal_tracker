@@ -15,6 +15,7 @@ pub static CURRENCY_CODES: Map<&'static str, &'static str> = phf_map! { // lacks
     "ATOM" => "ATOM",
     "SC" => "SC",
     "NANO" => "NANO",
+    "DOGE" => "XDG",
 };
 
 pub static ACTUAL_NAMES: Map<&'static str, &'static str> = phf_map! {
@@ -32,6 +33,7 @@ pub static ACTUAL_NAMES: Map<&'static str, &'static str> = phf_map! {
     "ATOM" => "Cosmos",
     "SC" => "Siacoin",
     "NANO" => "Nano",
+    "DOGE" => "Dogecoin",
 };
 
 // buy/sell targets are arbitrary, must be updated in code (for now)
@@ -51,4 +53,5 @@ pub static TARGETS: Map<&'static str, &'static (f32,f32)> = phf_map! {
     "ATOM" => &(24.5, 34.0),
     "SC" => &(0.007, 0.11),
     "NANO" => &(1.99, 3.0),
+    "DOGE" => &(0.085, 0.18),
 };
